@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="titulo mb-3">Crear tarjeta</h5>
+        <form [formGroup]="form" (ngSubmit)="crearTarjeta()">
+            <div class="input-group mb-3">
+                <span class="input-group-text">
+                    <i class="fas fa-user-circle" [ngClass]="getClase('titular')"></i></span>
+                <input type="text" formControlName="titular" class="form-control" placeholder="Titular">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fas fa-credit-card" [ngClass]="getClase('numeroTarjeta')"></i></span>
+                <input type="text" formControlName="numeroTarjeta" class="form-control" placeholder="Número de tarjeta">
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="input-group mb-3">                                                                                     
+                        <span class="input-group-text"><i class="fas fa-calendar-alt" [ngClass]="getClase('fechaExpiracion')"></i></span>
+                        <input type="date" formControlName="fechaExpiracion" class="form-control" placeholder="MM/YY">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fas fa-key" [ngClass]="getClase('cvv')"></i></span>
+                        <input type="password" formControlName="cvv" class="form-control" placeholder="CVV">
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success btn-lg" type="submit"><i class="fas fa-database"></i> Aceptar</button>
+              </div>            
+        </form>
+    </div>
+</div>
