@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tarjetacredito-ac142": {
+      "hosting": {
+        "TarjetaCredito": [
+          "tarjetacredito-ac142"
+        ]
+      }
+    }
+  }
+}
